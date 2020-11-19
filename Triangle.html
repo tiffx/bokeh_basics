@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="9fa2d935-78e6-49d9-8040-9daf95a5b9cd" data-root-id="2060"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="2205">
+          {"1300c823-bc11-4df4-a52f-5c96d8d6ef47":{"roots":{"references":[{"attributes":{"text":""},"id":"2098","type":"Title"},{"attributes":{},"id":"2070","type":"BasicTicker"},{"attributes":{},"id":"2104","type":"Selection"},{"attributes":{"dimension":1,"ticker":{"id":"2075","type":"BasicTicker"}},"id":"2078","type":"Grid"},{"attributes":{},"id":"2082","type":"SaveTool"},{"attributes":{},"id":"2101","type":"BasicTickFormatter"},{"attributes":{},"id":"2067","type":"LinearScale"},{"attributes":{},"id":"2080","type":"WheelZoomTool"},{"attributes":{},"id":"2084","type":"HelpTool"},{"attributes":{"callback":null},"id":"2061","type":"DataRange1d"},{"attributes":{},"id":"2103","type":"UnionRenderers"},{"attributes":{},"id":"2065","type":"LinearScale"},{"attributes":{"formatter":{"id":"2101","type":"BasicTickFormatter"},"ticker":{"id":"2070","type":"BasicTicker"}},"id":"2069","type":"LinearAxis"},{"attributes":{"data_source":{"id":"2092","type":"ColumnDataSource"},"glyph":{"id":"2093","type":"Triangle"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"2094","type":"Triangle"},"selection_glyph":null,"view":{"id":"2096","type":"CDSView"}},"id":"2095","type":"GlyphRenderer"},{"attributes":{"ticker":{"id":"2070","type":"BasicTicker"}},"id":"2073","type":"Grid"},{"attributes":{"overlay":{"id":"2105","type":"BoxAnnotation"}},"id":"2081","type":"BoxZoomTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"2079","type":"PanTool"},{"id":"2080","type":"WheelZoomTool"},{"id":"2081","type":"BoxZoomTool"},{"id":"2082","type":"SaveTool"},{"id":"2083","type":"ResetTool"},{"id":"2084","type":"HelpTool"}]},"id":"2085","type":"Toolbar"},{"attributes":{},"id":"2075","type":"BasicTicker"},{"attributes":{"source":{"id":"2092","type":"ColumnDataSource"}},"id":"2096","type":"CDSView"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"2105","type":"BoxAnnotation"},{"attributes":{"formatter":{"id":"2099","type":"BasicTickFormatter"},"ticker":{"id":"2075","type":"BasicTicker"}},"id":"2074","type":"LinearAxis"},{"attributes":{"callback":null},"id":"2063","type":"DataRange1d"},{"attributes":{"callback":null,"data":{"x":[3,7.5,10],"y":[3,6,9]},"selected":{"id":"2104","type":"Selection"},"selection_policy":{"id":"2103","type":"UnionRenderers"}},"id":"2092","type":"ColumnDataSource"},{"attributes":{"below":[{"id":"2069","type":"LinearAxis"}],"center":[{"id":"2073","type":"Grid"},{"id":"2078","type":"Grid"}],"left":[{"id":"2074","type":"LinearAxis"}],"renderers":[{"id":"2095","type":"GlyphRenderer"}],"title":{"id":"2098","type":"Title"},"toolbar":{"id":"2085","type":"Toolbar"},"x_range":{"id":"2061","type":"DataRange1d"},"x_scale":{"id":"2065","type":"LinearScale"},"y_range":{"id":"2063","type":"DataRange1d"},"y_scale":{"id":"2067","type":"LinearScale"}},"id":"2060","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"2099","type":"BasicTickFormatter"},{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"x":{"field":"x"},"y":{"field":"y"}},"id":"2093","type":"Triangle"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"x":{"field":"x"},"y":{"field":"y"}},"id":"2094","type":"Triangle"},{"attributes":{},"id":"2083","type":"ResetTool"},{"attributes":{},"id":"2079","type":"PanTool"}],"root_ids":["2060"]},"title":"Bokeh Application","version":"1.4.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('2205').textContent;
+                  var render_items = [{"docid":"1300c823-bc11-4df4-a52f-5c96d8d6ef47","roots":{"2060":"9fa2d935-78e6-49d9-8040-9daf95a5b9cd"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
